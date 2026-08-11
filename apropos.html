@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>À propos | GIE KADOU NENE</title>
+
+    <meta name="description"
+          content="Découvrez le GIE KADOU NENE DE SANTHIABA CENTRE, son histoire, ses valeurs et ses domaines d'activités à Louga.">
+
+    <style>
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+        :root {
+            --bleu: #06264a;
+            --bleu-clair: #0b5fa5;
+            --orange: #f58220;
+            --orange-clair: #ff9d3d;
+            --vert: #25D366;
+            --blanc: #ffffff;
+            --gris: #f5f7fa;
+            --gris-fonce: #555;
+            --texte: #222;
+            --ombre: 0 10px 30px rgba(0,0,0,0.10);
+        }
+
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--texte);
+            background: white;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            background: var(--bleu);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: white;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 85px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .logo-text h1 {
+            color: var(--bleu);
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .logo-text span {
+            color: var(--orange);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--bleu);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        .nav-links .active {
+            color: var(--orange);
+        }
+
+        .contact-btn {
+            background: var(--orange);
+            color: white !important;
+            padding: 11px 18px;
+            border-radius: 7px;
+        }
+
+        .contact-btn:hover {
+            background: var(--bleu);
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: var(--bleu);
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .page-hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(6,38,74,0.97),
+                    rgba(11,95,165,0.90)
+                );
+
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .page-hero span {
+            color: var(--orange-clair);
+            font-weight: bold;
+        }
+
+        .page-hero h2 {
+            font-size: clamp(40px, 6vw, 60px);
+            margin: 10px 0 15px;
+        }
+
+        .page-hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #eeeeee;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           PRESENTATION
+        ========================= */
+
+        .presentation {
+            padding: 80px 0;
+        }
+
+        .presentation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .presentation-image {
+            background: var(--gris);
+            min-height: 400px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: var(--ombre);
+        }
+
+        .presentation-image img {
+            width: 250px;
+            max-width: 80%;
+        }
+
+        .presentation-content span {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .presentation-content h2 {
+            color: var(--bleu);
+            font-size: 38px;
+            margin: 10px 0 20px;
+        }
+
+        .presentation-content p {
+            color: var(--gris-fonce);
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           CHIFFRES
+        ========================= */
+
+        .stats {
+            background: var(--gris);
+            padding: 65px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .stat {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: var(--ombre);
+        }
+
+        .stat-icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .stat h3 {
+            color: var(--orange);
+            font-size: 28px;
+        }
+
+        .stat p {
+            color: var(--gris-fonce);
+        }
+
+
+        /* =========================
+           ACTIVITES
+        ========================= */
+
+        .activities {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            color: var(--bleu);
+            font-size: 38px;
+            margin-top: 5px;
+        }
+
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .activity-card {
+            padding: 30px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: var(--ombre);
+            border-top: 4px solid var(--orange);
+            transition: 0.3s;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .activity-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bleu);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 27px;
+            margin-bottom: 18px;
+        }
+
+        .activity-card h3 {
+            color: var(--bleu);
+            margin-bottom: 10px;
+        }
+
+        .activity-card p {
+            color: var(--gris-fonce);
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           VALEURS
+        ========================= */
+
+        .values {
+            background: var(--bleu);
+            color: white;
+            padding: 90px 0;
+        }
+
+        .values .section-title h2 {
+            color: white;
+        }
+
+        .values .section-title p {
+            color: #dbe4ed;
+            max-width: 700px;
+            margin: 15px auto 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .value {
+            text-align: center;
+            padding: 30px 20px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+        }
+
+        .value-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .value h3 {
+            color: var(--orange-clair);
+            margin-bottom: 10px;
+        }
+
+        .value p {
+            color: #dbe4ed;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MISSION
+        ========================= */
+
+        .mission {
+            padding: 90px 0;
+        }
+
+        .mission-box {
+            background: var(--gris);
+            padding: 50px;
+            border-left: 6px solid var(--orange);
+            border-radius: 10px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .mission-box h2 {
+            color: var(--bleu);
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .mission-box p {
+            color: var(--gris-fonce);
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--bleu),
+                    var(--bleu-clair)
+                );
+
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: #eeeeee;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--vert);
+            color: white;
+            padding: 14px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .cta-btn:hover {
+            background: #1da851;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #03182e;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        footer h3 {
+            color: var(--orange);
+            margin-bottom: 18px;
+        }
+
+        footer p {
+            color: #c9d1da;
+            margin-bottom: 8px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #c9d1da;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 20px;
+            text-align: center;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .presentation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .activities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                display: none;
+                box-shadow: var(--ombre);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .top-content {
+                justify-content: center;
+            }
+
+            .top-content span:first-child {
+                display: none;
+            }
+
+            .logo img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .logo-text h1 {
+                font-size: 18px;
+            }
+
+            .presentation {
+                padding: 60px 0;
+            }
+
+            .presentation-content h2 {
+                font-size: 30px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .activities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-box {
+                padding: 30px 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     BARRE SUPERIEURE
+================================= -->
+
+<div class="top-bar">
+
+    <div class="container top-content">
+
+        <span>
+            📍 Louga — Santhiaba Centre
+        </span>
+
+        <span>
+            📞 76 168 5752
+            &nbsp; | &nbsp;
+            💬 76 168 5752
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header>
+
+    <div class="container navbar">
+
+
+        <a href="accueil.html" class="logo">
+
+            <img
+                src="Logo.png"
+                alt="Logo GIE Kadou Nene">
+
+            <div class="logo-text">
+
+                <h1>
+                    KADOU NENE
+                </h1>
+
+                <span>
+                    DE SANTHIABA CENTRE
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn">
+
+            ☰
+
+        </button>
+
+
+        <ul
+            class="nav-links"
+            id="navLinks">
+
+
+            <li>
+                <a 
+                   href="./index.html">
+                   Accueil
+              </a>
+            </li>
+
+            <li>
+                <a
+                        href="service.html">
+                        Services
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="apropos.html"
+                    class="active">
+                    À propos
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="realisation.html">
+                    Réalisations
+                </a>
+            </li>
+
+
+            <li>
+                <a
+                    href="https://wa.me/221761685752"
+                    target="_blank"
+                    class="contact-btn">
+                    WhatsApp
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+
+<!-- =================================
+     HERO
+================================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span>
+            QUI SOMMES-NOUS ?
+        </span>
+
+        <h2>
+            À propos de nous
+        </h2>
+
+        <p>
+            Découvrez le GIE KADOU NENE DE SANTHIABA CENTRE,
+            une structure basée à Louga et orientée vers
+            les services, les technologies et les solutions
+            adaptées aux besoins de nos clients.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     PRESENTATION
+================================= -->
+
+<section class="presentation">
+
+    <div class="container presentation-grid">
+
+
+        <div class="presentation-image">
+
+            <img
+                src="Logo.png"
+                alt="Logo GIE KADOU NENE">
+
+        </div>
+
+
+        <div class="presentation-content">
+
+            <span>
+                NOTRE ENTREPRISE
+            </span>
+
+            <h2>
+                GIE KADOU NENE DE SANTHIABA CENTRE
+            </h2>
+
+            <p>
+                Le GIE KADOU NENE DE SANTHIABA CENTRE
+                est une entreprise basée à Louga,
+                au quartier Santhiaba Centre.
+            </p>
+
+            <p>
+                Notre objectif est de proposer des services
+                accessibles, professionnels et adaptés aux
+                besoins des particuliers, commerçants,
+                associations et entreprises.
+            </p>
+
+            <p>
+                Nous intervenons notamment dans les domaines
+                de l'informatique, des réseaux, des NTIC,
+                de l'électronique, de la fourniture de matériel,
+                du BTP et de diverses prestations de services.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     CHIFFRES
+================================= -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+
+            <div class="stat">
+
+                <div class="stat-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Louga
+                </h3>
+
+                <p>
+                    Zone d'intervention
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-icon">
+                    💻
+                </div>
+
+                <h3>
+                    NTIC
+                </h3>
+
+                <p>
+                    Technologies et informatique
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-icon">
+                    🏗️
+                </div>
+
+                <h3>
+                    BTP
+                </h3>
+
+                <p>
+                    Prestations techniques
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Proximité
+                </h3>
+
+                <p>
+                    Service client
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     NOS ACTIVITES
+================================= -->
+
+<section class="activities">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span>
+                NOS DOMAINES
+            </span>
+
+            <h2>
+                Ce que nous faisons
+            </h2>
+
+        </div>
+
+
+        <div class="activities-grid">
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Informatique
+                </h3>
+
+                <p>
+                    Installation, maintenance, dépannage,
+                    configuration et optimisation des
+                    ordinateurs et équipements informatiques.
+                </p>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Réseaux & NTIC
+                </h3>
+
+                <p>
+                    Installation de réseaux, Wi-Fi,
+                    câblage, configuration des équipements
+                    et accompagnement informatique.
+                </p>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+                    📹
+                </div>
+
+                <h3>
+                    Sécurité
+                </h3>
+
+                <p>
+                    Solutions de vidéosurveillance et
+                    configuration des systèmes de sécurité
+                    adaptés aux besoins des clients.
+                </p>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+                    🌍
+                </div>
+
+                <h3>
+                    Solutions digitales
+                </h3>
+
+                <p>
+                    Création de sites web et accompagnement
+                    des entreprises dans leur présence
+                    numérique.
+                </p>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+                    🖥️
+                </div>
+
+                <h3>
+                    Matériel
+                </h3>
+
+                <p>
+                    Fourniture de matériel informatique,
+                    électronique, électroménager et
+                    équipements divers.
+                </p>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+                    🏗️
+                </div>
+
+                <h3>
+                    BTP
+                </h3>
+
+                <p>
+                    Prestations et services liés au BTP
+                    ainsi que diverses interventions
+                    techniques.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     NOS VALEURS
+================================= -->
+
+<section class="values">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span>
+                NOS ENGAGEMENTS
+            </span>
+
+            <h2>
+                Nos valeurs
+            </h2>
+
+            <p>
+                Nous voulons construire une relation durable
+                avec nos clients grâce à la qualité de nos
+                services et à notre proximité.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Confiance
+                </h3>
+
+                <p>
+                    Une relation transparente et honnête
+                    avec nos clients.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Qualité
+                </h3>
+
+                <p>
+                    Nous recherchons des solutions fiables
+                    et adaptées aux besoins.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Réactivité
+                </h3>
+
+                <p>
+                    Une prise en charge rapide des demandes
+                    et des problèmes de nos clients.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    💰
+                </div>
+
+                <h3>
+                    Accessibilité
+                </h3>
+
+                <p>
+                    Des solutions pensées pour différents
+                    budgets et besoins.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     MISSION
+================================= -->
+
+<section class="mission">
+
+    <div class="container">
+
+        <div class="mission-box">
+
+            <h2>
+                Notre mission
+            </h2>
+
+            <p>
+                Notre mission est de fournir des services
+                professionnels et accessibles aux particuliers,
+                commerces et entreprises.
+            </p>
+
+            <p>
+                Nous souhaitons notamment contribuer à
+                l'utilisation des technologies numériques
+                et à la modernisation des activités locales.
+            </p>
+
+            <p>
+                Le GIE KADOU NENE souhaite également développer
+                des partenariats et proposer progressivement
+                de nouvelles solutions répondant aux besoins
+                de sa clientèle.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     CTA
+================================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Vous avez un projet ?
+        </h2>
+
+        <p>
+            Contactez-nous pour discuter de votre besoin
+            et obtenir une proposition adaptée.
+        </p>
+
+        <a
+            href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20discuter%20d%27un%20projet."
+            target="_blank"
+            class="cta-btn">
+
+            💬 Nous contacter sur WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <div>
+
+            <h3>
+                GIE KADOU NENE
+            </h3>
+
+            <p>
+                De Santhiaba Centre
+            </p>
+
+            <p>
+                Informatique • Réseaux • Électronique
+                • NTIC • BTP
+            </p>
+
+            <p>
+                📍 Louga — Santhiaba Centre
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Navigation
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="accueil.html">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="service.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="apropos.html">
+                        À propos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📞 76 168 5752
+            </p>
+
+            <p>
+                💬 WhatsApp : 76 168 5752
+            </p>
+
+            <p>
+                <a 
+                        href="mailto:giekadounene@gmail.com">
+                        📧 giekadounene@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="container copyright">
+
+        © 2026 GIE KADOU NENE DE SANTHIABA CENTRE.
+        Tous droits réservés.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =================================
+     JAVASCRIPT MENU
+================================= -->
+
+<script>
+
+    const menuBtn = document.getElementById("menuBtn");
+
+    const navLinks = document.getElementById("navLinks");
+
+
+    menuBtn.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nos réalisations | GIE KADOU NENE</title>
+
+    <meta name="description"
+          content="Découvrez les réalisations et projets du GIE KADOU NENE DE SANTHIABA CENTRE à Louga.">
+
+    <style>
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+        :root {
+            --bleu: #06264a;
+            --bleu-clair: #0b5fa5;
+            --orange: #f58220;
+            --orange-clair: #ff9d3d;
+            --vert: #25D366;
+            --blanc: #ffffff;
+            --gris: #f5f7fa;
+            --gris-fonce: #555;
+            --texte: #222;
+            --ombre: 0 10px 30px rgba(0,0,0,0.10);
+        }
+
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--texte);
+            background: white;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            background: var(--bleu);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: white;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 85px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .logo-text h1 {
+            color: var(--bleu);
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .logo-text span {
+            color: var(--orange);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--bleu);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        .nav-links .active {
+            color: var(--orange);
+        }
+
+        .contact-btn {
+            background: var(--orange);
+            color: white !important;
+            padding: 11px 18px;
+            border-radius: 7px;
+        }
+
+        .contact-btn:hover {
+            background: var(--bleu);
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: var(--bleu);
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .page-hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(6,38,74,0.97),
+                    rgba(11,95,165,0.90)
+                );
+
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .page-hero span {
+            color: var(--orange-clair);
+            font-weight: bold;
+        }
+
+        .page-hero h2 {
+            font-size: clamp(40px, 6vw, 60px);
+            margin: 10px 0 15px;
+        }
+
+        .page-hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #eeeeee;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           INTRODUCTION
+        ========================= */
+
+        .intro {
+            padding: 75px 0 45px;
+            text-align: center;
+        }
+
+        .section-title span {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            color: var(--bleu);
+            font-size: 38px;
+            margin: 8px 0 15px;
+        }
+
+        .section-title p {
+            max-width: 750px;
+            margin: auto;
+            color: var(--gris-fonce);
+        }
+
+
+        /* =========================
+           FILTRES
+        ========================= */
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 35px 0 50px;
+        }
+
+        .filter-btn {
+            border: 2px solid var(--bleu);
+            background: white;
+            color: var(--bleu);
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bleu);
+            color: white;
+        }
+
+
+        /* =========================
+           REALISATIONS
+        ========================= */
+
+        .realisations {
+            padding: 20px 0 90px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--ombre);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-image {
+            height: 220px;
+            background: linear-gradient(
+                135deg,
+                var(--bleu),
+                var(--bleu-clair)
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 70px;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-category {
+            display: inline-block;
+            background: #fff1e5;
+            color: var(--orange);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .project-content h3 {
+            color: var(--bleu);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: var(--gris-fonce);
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .project-link {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            color: var(--bleu);
+        }
+
+
+        /* =========================
+           PROJET PHARE
+        ========================= */
+
+        .featured {
+            background: var(--gris);
+            padding: 90px 0;
+        }
+
+        .featured-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--ombre);
+        }
+
+        .featured-image {
+            min-height: 400px;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--bleu),
+                    var(--bleu-clair)
+                );
+
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+        }
+
+        .featured-content {
+            padding: 55px;
+        }
+
+        .featured-content span {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .featured-content h2 {
+            color: var(--bleu);
+            font-size: 34px;
+            margin: 10px 0 20px;
+        }
+
+        .featured-content p {
+            color: var(--gris-fonce);
+            margin-bottom: 15px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .check-list li {
+            margin-bottom: 10px;
+            color: var(--gris-fonce);
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--orange);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           PROCESSUS
+        ========================= */
+
+        .process {
+            padding: 90px 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .process-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 12px;
+            background: var(--gris);
+        }
+
+        .process-number {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--orange);
+            color: white;
+            margin: 0 auto 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .process-card h3 {
+            color: var(--bleu);
+            margin-bottom: 10px;
+        }
+
+        .process-card p {
+            color: var(--gris-fonce);
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--bleu),
+                    var(--bleu-clair)
+                );
+
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: #eeeeee;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--vert);
+            color: white;
+            padding: 14px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .cta-btn:hover {
+            background: #1da851;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #03182e;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        footer h3 {
+            color: var(--orange);
+            margin-bottom: 18px;
+        }
+
+        footer p {
+            color: #c9d1da;
+            margin-bottom: 8px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #c9d1da;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 20px;
+            text-align: center;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .featured-box {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                display: none;
+                box-shadow: var(--ombre);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .top-content {
+                justify-content: center;
+            }
+
+            .top-content span:first-child {
+                display: none;
+            }
+
+            .logo img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .logo-text h1 {
+                font-size: 18px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-content {
+                padding: 35px 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+
+    <div class="container top-content">
+
+        <span>
+            📍 Louga — Santhiaba Centre
+        </span>
+
+        <span>
+            📞 76 168 5752
+            &nbsp; | &nbsp;
+            💬 76 168 5752
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container navbar">
+
+
+        <a href="accueil.html" class="logo">
+
+            <img
+                src="Logo.png"
+                alt="Logo GIE Kadou Nene">
+
+            <div class="logo-text">
+
+                <h1>KADOU NENE</h1>
+
+                <span>DE SANTHIABA CENTRE</span>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn">
+
+            ☰
+
+        </button>
+
+
+        <ul
+            class="nav-links"
+            id="navLinks">
+
+
+            <li>
+                <a href="index.html">
+                    Accueil
+                </a>
+            </li>
+
+
+            <li>
+                <a href="service.html">
+                    Services
+                </a>
+            </li>
+
+
+            <li>
+                <a href="apropos.html">
+                    À propos
+                </a>
+            </li>
+
+
+            <li>
+                <a
+                    href="realisation.html"
+                    class="active">
+                    Réalisations
+                </a>
+            </li>
+
+
+            <li>
+                <a
+                    href="https://wa.me/221761685752"
+                    target="_blank"
+                    class="contact-btn">
+
+                    WhatsApp
+
+                </a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span>
+            NOTRE SAVOIR-FAIRE
+        </span>
+
+        <h2>
+            Nos réalisations
+        </h2>
+
+        <p>
+            Découvrez quelques exemples de projets et
+            de solutions que le GIE KADOU NENE peut
+            réaliser pour les particuliers, commerces
+            et entreprises.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                NOS PROJETS
+            </span>
+
+            <h2>
+                Des solutions adaptées à vos besoins
+            </h2>
+
+            <p>
+                Notre objectif est de proposer des solutions
+                pratiques, fiables et adaptées à chaque
+                projet, de la conception jusqu'à la réalisation.
+            </p>
+
+        </div>
+
+
+        <div class="filters">
+
+            <button
+                class="filter-btn active"
+                data-filter="all">
+
+                Tous
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="informatique">
+
+                Informatique
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="reseau">
+
+                Réseaux
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="digital">
+
+                Digital
+
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="securite">
+
+                Sécurité
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJETS
+========================= -->
+
+<section class="realisations">
+
+    <div class="container">
+
+        <div class="projects-grid">
+
+
+            <!-- PROJET 1 -->
+
+            <article
+                class="project-card"
+                data-category="informatique">
+
+                <div class="project-image">
+                    💻
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        INFORMATIQUE
+                    </span>
+
+                    <h3>
+                        Installation informatique
+                    </h3>
+
+                    <p>
+                        Installation et configuration
+                        d'ordinateurs et équipements
+                        informatiques pour particuliers
+                        et professionnels.
+                    </p>
+
+                    <a
+                        href="https://wa.me/221761685752?text=Bonjour%2C%20je%20souhaite%20un%20service%20informatique."
+                        target="_blank"
+                        class="project-link">
+
+                        Demander ce service →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJET 2 -->
+
+            <article
+                class="project-card"
+                data-category="reseau">
+
+                <div class="project-image">
+                    🌐
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        RÉSEAUX
+                    </span>
+
+                    <h3>
+                        Installation réseau Wi-Fi
+                    </h3>
+
+                    <p>
+                        Mise en place et configuration
+                        de réseaux Wi-Fi et solutions
+                        de connexion pour maisons,
+                        bureaux et commerces.
+                    </p>
+
+                    <a
+                        href="https://wa.me/221761685752?text=Bonjour%2C%20je%20souhaite%20installer%20un%20reseau%20Wi-Fi."
+                        target="_blank"
+                        class="project-link">
+
+                        Demander ce service →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJET 3 -->
+
+            <article
+                class="project-card"
+                data-category="securite">
+
+                <div class="project-image">
+                    📹
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        SÉCURITÉ
+                    </span>
+
+                    <h3>
+                        Vidéosurveillance
+                    </h3>
+
+                    <p>
+                        Installation et configuration
+                        de solutions de vidéosurveillance
+                        pour maisons, boutiques et bureaux.
+                    </p>
+
+                    <a
+                        href="https://wa.me/221761685752?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20une%20videosurveillance."
+                        target="_blank"
+                        class="project-link">
+
+                        Demander un devis →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJET 4 -->
+
+            <article
+                class="project-card"
+                data-category="digital">
+
+                <div class="project-image">
+                    🌍
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        DIGITAL
+                    </span>
+
+                    <h3>
+                        Création de site web
+                    </h3>
+
+                    <p>
+                        Création de sites web modernes
+                        pour entreprises, commerces,
+                        associations et projets personnels.
+                    </p>
+
+                    <a
+                        href="https://wa.me/221761685752?text=Bonjour%2C%20je%20souhaite%20creer%20un%20site%20web."
+                        target="_blank"
+                        class="project-link">
+
+                        Demander ce service →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJET 5 -->
+
+            <article
+                class="project-card"
+                data-category="informatique">
+
+                <div class="project-image">
+                    🖥️
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        MATÉRIEL
+                    </span>
+
+                    <h3>
+                        Fourniture de matériel
+                    </h3>
+
+                    <p>
+                        Fourniture de matériel informatique,
+                        électronique et équipements adaptés
+                        aux besoins des clients.
+                    </p>
+
+                    <a
+                        href="https://wa.me/221761685752?text=Bonjour%2C%20je%20cherche%20du%20materiel%20informatique."
+                        target="_blank"
+                        class="project-link">
+
+                        Demander un devis →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJET 6 -->
+
+            <article
+                class="project-card"
+                data-category="reseau">
+
+                <div class="project-image">
+                    🔧
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        MAINTENANCE
+                    </span>
+
+                    <h3>
+                        Maintenance & dépannage
+                    </h3>
+
+                    <p>
+                        Diagnostic, maintenance et dépannage
+                        des équipements informatiques et
+                        réseaux.
+                    </p>
+
+                    <a
+                        href="https://wa.me/221761685752?text=Bonjour%2C%20j%27ai%20besoin%20d%27une%20maintenance%20informatique."
+                        target="_blank"
+                        class="project-link">
+
+                        Demander ce service →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJET PHARE
+========================= -->
+
+<section class="featured">
+
+    <div class="container">
+
+        <div class="featured-box">
+
+
+            <div class="featured-image">
+
+                🚀
+
+            </div>
+
+
+            <div class="featured-content">
+
+                <span>
+                    NOTRE APPROCHE
+                </span>
+
+                <h2>
+                    Votre projet, notre engagement
+                </h2>
+
+                <p>
+                    Chaque projet commence par l'écoute
+                    des besoins du client afin de proposer
+                    une solution réellement adaptée.
+                </p>
+
+                <p>
+                    Nous privilégions une approche simple :
+                    comprendre, conseiller, réaliser et
+                    assurer le suivi.
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>
+                        Analyse de votre besoin
+                    </li>
+
+                    <li>
+                        Proposition d'une solution
+                    </li>
+
+                    <li>
+                        Devis adapté
+                    </li>
+
+                    <li>
+                        Réalisation du projet
+                    </li>
+
+                    <li>
+                        Suivi et assistance
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROCESSUS
+========================= -->
+
+<section class="process">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                COMMENT ÇA MARCHE ?
+            </span>
+
+            <h2>
+                De votre idée à la réalisation
+            </h2>
+
+            <p>
+                Nous vous accompagnons à chaque étape
+                de votre projet.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    1
+                </div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Vous nous contactez par WhatsApp,
+                    téléphone ou directement.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    2
+                </div>
+
+                <h3>
+                    Analyse
+                </h3>
+
+                <p>
+                    Nous étudions votre besoin et
+                    recherchons la meilleure solution.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    3
+                </div>
+
+                <h3>
+                    Réalisation
+                </h3>
+
+                <p>
+                    Nous mettons en œuvre la solution
+                    choisie.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    4
+                </div>
+
+                <h3>
+                    Suivi
+                </h3>
+
+                <p>
+                    Nous restons disponibles après
+                    la réalisation pour vous accompagner.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Vous avez un projet ?
+        </h2>
+
+        <p>
+            Expliquez-nous votre besoin et notre équipe
+            vous répondra sur WhatsApp.
+        </p>
+
+        <a
+            href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20j%27ai%20un%20projet%20et%20je%20souhaite%20un%20devis."
+            target="_blank"
+            class="cta-btn">
+
+            💬 Demander un devis sur WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <div>
+
+            <h3>
+                GIE KADOU NENE
+            </h3>
+
+            <p>
+                De Santhiaba Centre
+            </p>
+
+            <p>
+                Informatique • Réseaux • Électronique
+                • NTIC • BTP
+            </p>
+
+            <p>
+                📍 Louga — Santhiaba Centre
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Navigation
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="accueil.html">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="service.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="apropos.html">
+                        À propos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="realisations.html">
+                        Réalisations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📞 76 168 5752
+            </p>
+
+            <p>
+                💬 WhatsApp : 76 168 5752
+            </p>
+
+            <p>
+                <a 
+                        href="mailto:giekadounene@gmail.com">
+                        📧giekadounene@gmail.com
+                /a>
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="container copyright">
+
+        © 2026 GIE KADOU NENE DE SANTHIABA CENTRE.
+        Tous droits réservés.
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* MENU MOBILE */
+
+    const menuBtn = document.getElementById("menuBtn");
+
+    const navLinks = document.getElementById("navLinks");
+
+
+    menuBtn.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+
+
+    /* FILTRE DES PROJETS */
+
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+    const projectCards =
+        document.querySelectorAll(".project-card");
+
+
+    filterButtons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+
+            filterButtons.forEach(function(btn) {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            this.classList.add("active");
+
+
+            const filter =
+                this.getAttribute("data-filter");
+
+
+            projectCards.forEach(function(card) {
+
+
+                const category =
+                    card.getAttribute("data-category");
+
+
+                if (
+                    filter === "all" ||
+                    category === filter
+                ) {
+
+                    card.style.display = "block";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

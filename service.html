@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nos Services | GIE KADOU NENE</title>
+
+    <meta name="description"
+          content="Découvrez les services du GIE Kadou Nene à Louga : informatique, réseaux, Wi-Fi, vidéosurveillance, création web, matériel informatique et BTP.">
+
+    <style>
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+        :root {
+            --bleu: #06264a;
+            --bleu-clair: #0b5fa5;
+            --orange: #f58220;
+            --orange-clair: #ff9d3d;
+            --vert: #25D366;
+            --blanc: #ffffff;
+            --gris: #f5f7fa;
+            --gris-fonce: #555;
+            --texte: #222;
+            --ombre: 0 10px 30px rgba(0,0,0,0.10);
+        }
+
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--texte);
+            background: var(--blanc);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            background: var(--bleu);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+       header {
+            background: white;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 85px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .logo-text h1 {
+            color: var(--bleu);
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .logo-text span {
+            color: var(--orange);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--bleu);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        .nav-links .active {
+            color: var(--orange);
+        }
+
+        .contact-btn {
+            background: var(--orange);
+            color: white !important;
+            padding: 11px 18px;
+            border-radius: 7px;
+        }
+
+        .contact-btn:hover {
+            background: var(--bleu);
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: var(--bleu);
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO SERVICES
+        ========================= */
+
+        .page-hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(6,38,74,0.97),
+                    rgba(11,95,165,0.90)
+                );
+
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .page-hero span {
+            color: var(--orange-clair);
+            font-weight: bold;
+        }
+
+        .page-hero h2 {
+            font-size: clamp(40px, 6vw, 60px);
+            margin: 10px 0 15px;
+        }
+
+        .page-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #eeeeee;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            padding: 70px 0 40px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: var(--bleu);
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 750px;
+            margin: auto;
+            color: var(--gris-fonce);
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            padding: 40px 0 90px;
+            background: var(--gris);
+        }
+
+        .service-category {
+            margin-bottom: 70px;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bleu);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 27px;
+        }
+
+        .category-title h2 {
+            color: var(--bleu);
+            font-size: 30px;
+        }
+
+        .category-title p {
+            color: #777;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--ombre);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--orange);
+        }
+
+        .service-card h3 {
+            color: var(--bleu);
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: var(--orange);
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .price small {
+            font-size: 12px;
+            color: #777;
+            font-weight: normal;
+        }
+
+        .whatsapp-btn {
+            display: block;
+            text-align: center;
+            background: var(--vert);
+            color: white;
+            padding: 11px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1da851;
+        }
+
+
+        /* =========================
+           PACKS
+        ========================= */
+
+        .packs {
+            padding: 90px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            color: var(--bleu);
+            font-size: 38px;
+            margin-top: 5px;
+        }
+
+        .packs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .pack {
+            border: 2px solid #e9edf2;
+            border-radius: 14px;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .pack:hover {
+            border-color: var(--orange);
+            box-shadow: var(--ombre);
+        }
+
+        .pack.featured {
+            border-color: var(--orange);
+            transform: translateY(-8px);
+        }
+
+        .pack h3 {
+            color: var(--bleu);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .pack-price {
+            color: var(--orange);
+            font-size: 28px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .pack ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .pack li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .pack li::before {
+            content: "✓";
+            color: var(--orange);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .pack-btn {
+            display: inline-block;
+            background: var(--bleu);
+            color: white;
+            padding: 11px 20px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .pack-btn:hover {
+            background: var(--orange);
+        }
+
+
+        /* =========================
+           DEVIS
+        ========================= */
+
+        .devis {
+            padding: 80px 20px;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--bleu),
+                    var(--bleu-clair)
+                );
+
+            color: white;
+            text-align: center;
+        }
+
+        .devis h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .devis p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #eeeeee;
+        }
+
+        .devis-btn {
+            display: inline-block;
+            background: var(--vert);
+            color: white;
+            padding: 14px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #03182e;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        footer h3 {
+            color: var(--orange);
+            margin-bottom: 18px;
+        }
+
+        footer p {
+            color: #c9d1da;
+            margin-bottom: 8px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #c9d1da;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 20px;
+            text-align: center;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .packs-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .pack.featured {
+                transform: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                display: none;
+                box-shadow: var(--ombre);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .top-content {
+                justify-content: center;
+            }
+
+            .top-content span:first-child {
+                display: none;
+            }
+
+            .logo img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .logo-text h1 {
+                font-size: 18px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero {
+                padding: 70px 15px;
+            }
+
+            .page-hero h2 {
+                font-size: 42px;
+            }
+
+            .category-title h2 {
+                font-size: 24px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     BARRE SUPERIEURE
+================================= -->
+
+<div class="top-bar">
+
+    <div class="container top-content">
+
+        <span>
+            📍 Louga — Santhiaba Centre
+        </span>
+
+        <span>
+            📞 76 168 5752
+            &nbsp; | &nbsp;
+            💬 76 168 5752
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="logo.png"
+                alt="Logo GIE Kadou Nene">
+
+            <div class="logo-text">
+
+                <h1>KADOU NENE</h1>
+
+                <span>
+                    DE SANTHIABA CENTRE
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn">
+
+            ☰
+
+        </button>
+
+
+        <ul
+            class="nav-links"
+            id="navLinks">
+
+            <li>
+               <a 
+                   href="index.html">
+                   Accueil
+              </a>
+            </li>
+
+            <li>
+                <a
+                    href="services.html"
+                    class="active">
+
+                    Services
+
+                </a>
+            </li>
+
+            <li>
+                <a 
+                        href="apropos.html">
+                        À propos
+                    </a>
+            </li>
+
+            <li>
+                <a
+                    href="realisation.html">
+                    Réalisations
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://wa.me/221761685752"
+                    target="_blank"
+                    class="contact-btn">
+
+                    WhatsApp
+
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+
+<!-- =================================
+     HERO
+================================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span>
+            NOS SOLUTIONS
+        </span>
+
+        <h2>
+            Nos Services
+        </h2>
+
+        <p>
+            Des solutions professionnelles et accessibles
+            pour les particuliers, commerces, associations
+            et entreprises à Louga.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     INTRODUCTION
+================================= -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <h2>
+            Des services adaptés à vos besoins
+        </h2>
+
+        <p>
+            Le GIE KADOU NENE vous accompagne de l'installation
+            à la maintenance, avec des prestations adaptées
+            à votre budget et à vos objectifs.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     SERVICES
+================================= -->
+
+<section class="services">
+
+<div class="container">
+
+
+
+<!-- ================================
+     INFORMATIQUE
+================================ -->
+
+<div class="service-category">
+
+    <div class="category-title">
+
+        <div class="category-icon">
+            💻
+        </div>
+
+        <div>
+
+            <h2>
+                Informatique
+            </h2>
+
+            <p>
+                Installation, dépannage et optimisation
+                de vos ordinateurs.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <h3>
+                Installation Windows
+            </h3>
+
+            <p>
+                Installation du système, configuration
+                et préparation de votre ordinateur.
+            </p>
+
+            <div class="price">
+                5 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20une%20installation%20Windows."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Commander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Pack PC étudiant
+            </h3>
+
+            <p>
+                Windows, pilotes, logiciels essentiels
+                et optimisation générale.
+            </p>
+
+            <div class="price">
+                10 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Pack%20PC%20%C3%A9tudiant."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Commander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Nettoyage & optimisation
+            </h3>
+
+            <p>
+                Suppression des fichiers inutiles,
+                optimisation et amélioration des performances.
+            </p>
+
+            <div class="price">
+                5 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20faire%20optimiser%20mon%20ordinateur."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Commander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Installation SSD / RAM
+            </h3>
+
+            <p>
+                Installation et configuration d'un SSD
+                ou ajout de mémoire RAM.
+            </p>
+
+            <div class="price">
+                5 000 FCFA
+                <small>main-d'œuvre</small>
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20installer%20un%20SSD%20ou%20de%20la%20RAM."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Commander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Installation imprimante
+            </h3>
+
+            <p>
+                Installation des pilotes et configuration
+                de votre imprimante.
+            </p>
+
+            <div class="price">
+                5 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20installer%20une%20imprimante."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Commander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Récupération de données
+            </h3>
+
+            <p>
+                Tentative de récupération de fichiers
+                supprimés ou perdus.
+            </p>
+
+            <div class="price">
+                À partir de 10 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20j%27ai%20besoin%20d%27une%20r%C3%A9cup%C3%A9ration%20de%20donn%C3%A9es."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================
+     RESEAUX
+================================ -->
+
+<div class="service-category">
+
+    <div class="category-title">
+
+        <div class="category-icon">
+            🌐
+        </div>
+
+        <div>
+
+            <h2>
+                Réseaux & Wi-Fi
+            </h2>
+
+            <p>
+                Installation et configuration de réseaux.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <h3>
+                Configuration routeur
+            </h3>
+
+            <p>
+                Configuration du routeur, Wi-Fi,
+                sécurité et paramètres réseau.
+            </p>
+
+            <div class="price">
+                5 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20configurer%20mon%20routeur."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Commander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Installation Wi-Fi
+            </h3>
+
+            <p>
+                Installation et configuration d'un
+                réseau Wi-Fi pour maison ou commerce.
+            </p>
+
+            <div class="price">
+                10 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20installer%20un%20r%C3%A9seau%20Wi-Fi."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Commander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Installation réseau RJ45
+            </h3>
+
+            <p>
+                Installation et câblage réseau
+                pour maison, boutique ou entreprise.
+            </p>
+
+            <div class="price">
+                2 000 FCFA / point
+                <small>main-d'œuvre</small>
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20installer%20un%20r%C3%A9seau%20RJ45."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Diagnostic réseau
+            </h3>
+
+            <p>
+                Recherche de problèmes de connexion
+                et diagnostic de votre réseau.
+            </p>
+
+            <div class="price">
+                5 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20j%27ai%20un%20probl%C3%A8me%20avec%20mon%20r%C3%A9seau."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Diagnostiquer
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Configuration switch
+            </h3>
+
+            <p>
+                Configuration et intégration d'un
+                switch dans votre réseau.
+            </p>
+
+            <div class="price">
+                À partir de 5 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20configurer%20un%20switch."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Réseau entreprise
+            </h3>
+
+            <p>
+                Installation complète de réseau
+                pour petite entreprise.
+            </p>
+
+            <div class="price">
+                À partir de 25 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20installer%20un%20r%C3%A9seau%20pour%20mon%20entreprise."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander un devis
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================
+     VIDEOSURVEILLANCE
+================================ -->
+
+<div class="service-category">
+
+    <div class="category-title">
+
+        <div class="category-icon">
+            📹
+        </div>
+
+        <div>
+
+            <h2>
+                Vidéosurveillance
+            </h2>
+
+            <p>
+                Sécurisez votre maison, boutique ou entreprise.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <h3>
+                Installation 1 à 2 caméras
+            </h3>
+
+            <p>
+                Installation et configuration de base.
+                Matériel non inclus.
+            </p>
+
+            <div class="price">
+                À partir de 25 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20installer%201%20%C3%A0%202%20cam%C3%A9ras."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander un devis
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Installation 3 à 4 caméras
+            </h3>
+
+            <p>
+                Installation, câblage et configuration
+                du système.
+            </p>
+
+            <div class="price">
+                À partir de 40 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20installer%203%20%C3%A0%204%20cam%C3%A9ras."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander un devis
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Configuration téléphone
+            </h3>
+
+            <p>
+                Configuration de l'accès aux caméras
+                depuis votre smartphone.
+            </p>
+
+            <div class="price">
+                5 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20configurer%20mes%20cam%C3%A9ras%20sur%20mon%20t%C3%A9l%C3%A9phone."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Commander
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================
+     CREATION WEB
+================================ -->
+
+<div class="service-category">
+
+    <div class="category-title">
+
+        <div class="category-icon">
+            🌍
+        </div>
+
+        <div>
+
+            <h2>
+                Création de sites web
+            </h2>
+
+            <p>
+                Développez votre présence professionnelle sur Internet.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <h3>
+                Site vitrine
+            </h3>
+
+            <p>
+                Présentation de votre entreprise,
+                services, contacts et localisation.
+            </p>
+
+            <div class="price">
+                À partir de 100 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20un%20site%20vitrine."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander un devis
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Site professionnel
+            </h3>
+
+            <p>
+                Site complet avec plusieurs pages,
+                galerie, services et formulaire.
+            </p>
+
+            <div class="price">
+                À partir de 150 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20un%20site%20professionnel."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander un devis
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Site e-commerce
+            </h3>
+
+            <p>
+                Catalogue, panier, commandes et
+                fonctionnalités adaptées à votre commerce.
+            </p>
+
+            <div class="price">
+                À partir de 250 000 FCFA
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20un%20site%20e-commerce."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander un devis
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================
+     MATERIEL
+================================ -->
+
+<div class="service-category">
+
+    <div class="category-title">
+
+        <div class="category-icon">
+            🖥️
+        </div>
+
+        <div>
+
+            <h2>
+                Matériel informatique & électronique
+            </h2>
+
+            <p>
+                Vente de matériel sur commande.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <h3>
+                Ordinateurs
+            </h3>
+
+            <p>
+                PC portables et ordinateurs adaptés
+                à vos besoins.
+            </p>
+
+            <div class="price">
+                Sur devis
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20cherche%20un%20ordinateur."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                SSD & RAM
+            </h3>
+
+            <p>
+                SSD, disques durs et mémoires RAM
+                selon votre ordinateur.
+            </p>
+
+            <div class="price">
+                Sur devis
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20cherche%20un%20SSD%20ou%20de%20la%20RAM."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Routeurs & équipements réseau
+            </h3>
+
+            <p>
+                Routeurs, switches, câbles RJ45
+                et accessoires réseau.
+            </p>
+
+            <div class="price">
+                Sur devis
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20cherche%20du%20mat%C3%A9riel%20r%C3%A9seau."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================
+     BTP
+================================ -->
+
+<div class="service-category">
+
+    <div class="category-title">
+
+        <div class="category-icon">
+            🏗️
+        </div>
+
+        <div>
+
+            <h2>
+                BTP & prestations diverses
+            </h2>
+
+            <p>
+                Des prestations techniques adaptées à vos projets.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <h3>
+                Électricité
+            </h3>
+
+            <p>
+                Travaux et installations électriques
+                selon les besoins du chantier.
+            </p>
+
+            <div class="price">
+                Sur devis
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20un%20devis%20pour%20des%20travaux%20d%27%C3%A9lectricit%C3%A9."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander un devis
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Peinture & rénovation
+            </h3>
+
+            <p>
+                Travaux de peinture, rénovation
+                et amélioration des espaces.
+            </p>
+
+            <div class="price">
+                Sur devis
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20un%20devis%20pour%20des%20travaux%20de%20peinture%20ou%20r%C3%A9novation."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander un devis
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <h3>
+                Plomberie & entretien
+            </h3>
+
+            <p>
+                Petits travaux de plomberie,
+                entretien et réparations.
+            </p>
+
+            <div class="price">
+                Sur devis
+            </div>
+
+            <a
+                href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20un%20devis%20pour%20des%20travaux%20de%20plomberie."
+                target="_blank"
+                class="whatsapp-btn">
+
+                💬 Demander un devis
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================
+     PACKS
+================================= -->
+
+<section class="packs">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                NOS OFFRES
+            </span>
+
+            <h2>
+                Packs populaires
+            </h2>
+
+        </div>
+
+
+        <div class="packs-grid">
+
+
+            <!-- PACK 1 -->
+
+            <div class="pack">
+
+                <h3>
+                    Pack PC Étudiant
+                </h3>
+
+                <div class="pack-price">
+                    10 000 FCFA
+                </div>
+
+                <ul>
+
+                    <li>
+                        Installation Windows
+                    </li>
+
+                    <li>
+                        Pilotes
+                    </li>
+
+                    <li>
+                        Logiciels essentiels
+                    </li>
+
+                    <li>
+                        Optimisation
+                    </li>
+
+                </ul>
+
+                <a
+                    href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20veux%20le%20Pack%20PC%20%C3%89tudiant."
+                    target="_blank"
+                    class="pack-btn">
+
+                    Choisir ce pack
+
+                </a>
+
+            </div>
+
+
+            <!-- PACK 2 -->
+
+            <div class="pack featured">
+
+                <h3>
+                    Pack Digital
+                </h3>
+
+                <div class="pack-price">
+                    35 000 FCFA
+                </div>
+
+                <ul>
+
+                    <li>
+                        Création WhatsApp Business
+                    </li>
+
+                    <li>
+                        Page Facebook
+                    </li>
+
+                    <li>
+                        Logo simple
+                    </li>
+
+                    <li>
+                        Affiche publicitaire
+                    </li>
+
+                    <li>
+                        Catalogue WhatsApp
+                    </li>
+
+                </ul>
+
+                <a
+                    href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Pack%20Digital."
+                    target="_blank"
+                    class="pack-btn">
+
+                    Choisir ce pack
+
+                </a>
+
+            </div>
+
+
+            <!-- PACK 3 -->
+
+            <div class="pack">
+
+                <h3>
+                    Pack Entreprise
+                </h3>
+
+                <div class="pack-price">
+                    Sur devis
+                </div>
+
+                <ul>
+
+                    <li>
+                        Réseau informatique
+                    </li>
+
+                    <li>
+                        Wi-Fi professionnel
+                    </li>
+
+                    <li>
+                        Maintenance
+                    </li>
+
+                    <li>
+                        Équipements réseau
+                    </li>
+
+                    <li>
+                        Assistance technique
+                    </li>
+
+                </ul>
+
+                <a
+                    href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20le%20Pack%20Entreprise."
+                    target="_blank"
+                    class="pack-btn">
+
+                    Demander un devis
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     CTA
+================================= -->
+
+<section class="devis">
+
+    <div class="container">
+
+        <h2>
+            Vous avez un projet ?
+        </h2>
+
+        <p>
+            Décrivez-nous votre besoin. Nous vous proposerons
+            une solution adaptée à votre budget.
+        </p>
+
+        <a
+            href="https://wa.me/221761685752?text=Bonjour%20GIE%20Kadou%20Nene%2C%20je%20souhaite%20obtenir%20un%20devis."
+            target="_blank"
+            class="devis-btn">
+
+            💬 Demander un devis sur WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <div>
+
+            <h3>
+                GIE KADOU NENE
+            </h3>
+
+            <p>
+                De Santhiaba Centre
+            </p>
+
+            <p>
+                Informatique • Réseaux • Électronique
+                • NTIC • BTP
+            </p>
+
+            <p>
+                📍 Louga — Santhiaba Centre
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Navigation
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="index.html">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#about">
+                        À propos
+                    </a>
+                </li>
+
+                <li>
+                <a
+                    href="realisations.html"
+                    class="active">
+                    Réalisations
+                </a>
+            </li>
+         
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📞 76 168 5752
+            </p>
+
+            <p>
+                💬 WhatsApp : 76 168 5752
+            </p>
+
+            <p>
+                <a 
+                        href="mailto:giekadounene@gmail.com">
+                        📧giekadounene@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="container copyright">
+
+        © 2026 GIE KADOU NENE DE SANTHIABA CENTRE.
+        Tous droits réservés.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =================================
+     JAVASCRIPT
+================================= -->
+
+<script>
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+
+    // Fermer le menu après sélection
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+</html>
